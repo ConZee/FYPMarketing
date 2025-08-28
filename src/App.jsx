@@ -69,7 +69,7 @@ const App = () => {
       <nav className="relative z-10 flex items-center justify-between p-6 bg-slate-800/50 backdrop-blur-lg border-b border-slate-700/50">
         <div className="flex items-center space-x-2">
           <Shield className="w-8 h-8 text-cyan-400" />
-          <span className="text-xl font-bold">NetWatch</span>
+          <span className="text-xl font-bold">Project Syntra</span>
         </div>
         <div className="flex items-center space-x-6">
           <a href="#features" className="hover:text-cyan-400 transition-colors">Features</a>
@@ -98,7 +98,7 @@ const App = () => {
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              NetWatch
+              Project Syntra
             </span>
             <br />
             <span className="text-3xl md:text-4xl font-light text-slate-300">
@@ -299,7 +299,7 @@ const App = () => {
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center mb-4">
             <Shield className="w-6 h-6 text-cyan-400 mr-2" />
-            <span className="text-lg font-semibold">NetWatch Dashboard</span>
+            <span className="text-lg font-semibold">Project Syntra Dashboard</span>
           </div>
           <p className="text-slate-400 text-sm">
             Final Year Project - Virtualized Network Intrusion Detection System
