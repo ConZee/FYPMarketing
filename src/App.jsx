@@ -18,13 +18,13 @@ const App = () => {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Multi-IDS Integration",
-      description: "Seamlessly integrate with Snort, Kismet, Zeek, and Suricata for comprehensive network monitoring",
+      description: "Seamlessly integrate with Suricata and Zeek for network monitoring",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Advanced Analytics",
-      description: "Leverage data mining techniques to extract actionable insights from network traffic patterns",
+      description: "Gain actionable insights by evaluating network traffic behavior and trends",
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -42,10 +42,10 @@ const App = () => {
   ];
 
   const technologies = [
-    { name: "Snort", description: "Open-source intrusion prevention system", icon: <Lock className="w-6 h-6" /> },
+    //{ name: "Snort", description: "Open-source intrusion prevention system", icon: <Lock className="w-6 h-6" /> },
     { name: "Zeek (Bro)", description: "Network analysis framework", icon: <Activity className="w-6 h-6" /> },
     { name: "Suricata", description: "High-performance IDS/IPS engine", icon: <Shield className="w-6 h-6" /> },
-    { name: "Kismet", description: "Wireless network detector", icon: <Zap className="w-6 h-6" /> }
+    //{ name: "Kismet", description: "Wireless network detector", icon: <Zap className="w-6 h-6" /> }
   ];
 
   const skills = [
@@ -75,7 +75,7 @@ const App = () => {
           <a href="#features" className="hover:text-cyan-400 transition-colors">Features</a>
           <a href="#tech" className="hover:text-cyan-400 transition-colors">Technology</a>
           <a href="#about" className="hover:text-cyan-400 transition-colors">About</a>
-          <a href="https://github.com/ConZee/FYPMarketing" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all">
+          <a href="https://github.com/ConZee/Project-Syntra" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all">
             <Github className="w-4 h-4" />
             <span>GitHub</span>
           </a>
@@ -155,17 +155,17 @@ const App = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {technologies.map((tech, index) => (
-              <div key={index} className="group">
-                <div className="p-6 rounded-xl bg-slate-700/30 backdrop-blur-lg border border-slate-600/30 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div key={index} className="flex-grow basis-[300px] max-w-[320px] group">
+                <div className="h-full flex flex-col justify-between p-6 rounded-xl bg-slate-700/30 backdrop-blur-lg border border-slate-600/30 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-purple-500/20 rounded-lg mr-3 group-hover:bg-purple-500/30 transition-colors">
                       {tech.icon}
                     </div>
                     <h3 className="font-semibold text-lg">{tech.name}</h3>
                   </div>
-                  <p className="text-slate-400 text-sm">{tech.description}</p>
+                  <p className="text-slate-400 text-sm break-words">{tech.description}</p>
                 </div>
               </div>
             ))}
@@ -258,19 +258,12 @@ const App = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a 
-              href="https://github.com/ConZee/FYPMarketing" 
+              href="https://github.com/ConZee/Project-Syntra" 
               className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-xl"
             >
               <Github className="w-5 h-5" />
               <span>View Source Code</span>
               <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a 
-              href="https://github.com/ConZee/ISIT207A2" 
-              className="px-8 py-4 rounded-xl font-semibold border-2 border-slate-600 hover:border-cyan-400 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2"
-            >
-              <span>Design Reference</span>
-              <ExternalLink className="w-4 h-4" />
             </a>
           </div>
 
@@ -305,7 +298,7 @@ const App = () => {
             Final Year Project - Virtualized Network Intrusion Detection System
           </p>
           <div className="flex justify-center space-x-6 mt-4">
-            <a href="https://github.com/ConZee/FYPMarketing" className="text-slate-400 hover:text-cyan-400 transition-colors">
+            <a href="https://github.com/ConZee/Project-Syntra" className="text-slate-400 hover:text-cyan-400 transition-colors">
               <Github className="w-5 h-5" />
             </a>
           </div>

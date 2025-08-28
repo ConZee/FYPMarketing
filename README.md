@@ -152,8 +152,7 @@ Open a Pull Request
 This project is part of a Final Year Project (FYP) for educational purposes.
 
 🔗 Links
-Main Repository: FYPMarketing
-Design Reference: ISIT207A2
+Main Repository: Project-Syntra
 Live Demo: [Deploy with Vercel/Netlify]
 📧 Contact
 For questions about this FYP project or the marketing site, please create an issue in the GitHub repository.
