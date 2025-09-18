@@ -253,6 +253,8 @@ const App = () => {
             create a comprehensive network monitoring solution.
           </p>
           
+          {/* Video Recording */}
+          {/*
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <div className="w-full sm:w-[640px] aspect-video rounded-xl shadow-xl overflow-hidden">
               <iframe
@@ -263,7 +265,7 @@ const App = () => {
                 className="w-full h-full"
               ></iframe>
             </div>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-6 rounded-xl bg-slate-700/20 backdrop-blur-lg">
