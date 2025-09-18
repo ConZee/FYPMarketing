@@ -117,6 +117,19 @@ const App = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
+
+          {/* Gallery Section
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/gallery"    // replace with your actual route or external link
+              target="_blank"    // remove this if it's an internal route you want in the same tab
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-xl"
+            >
+              <span>Explore Dashboard</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div> */}
         </div>
 
         {/* Floating Cards */}
