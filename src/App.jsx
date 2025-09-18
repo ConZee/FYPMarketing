@@ -116,9 +116,6 @@ const App = () => {
               <span>Explore Dashboard</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 rounded-xl font-semibold border-2 border-slate-600 hover:border-cyan-400 hover:text-cyan-400 transition-colors duration-200">
-              View Documentation
-            </button>
           </div>
         </div>
 
