@@ -254,14 +254,15 @@ const App = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a 
-              href="https://github.com/ConZee/Project-Syntra" 
-              className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-xl"
-            >
-              <Github className="w-5 h-5" />
-              <span>View Source Code</span>
-              <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <div className="w-full sm:w-[640px] aspect-video rounded-xl shadow-xl overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=TSuuX1c-Q4vGpuVf"
+                title="Project Sentinel Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
