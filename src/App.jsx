@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Shield, Activity, Eye, BarChart3, Network, Zap, Lock, AlertTriangle, CheckCircle, ArrowRight, Monitor, Database, Brain, Code, Github, ExternalLink } from 'lucide-react';
 import './App.css';
 import screenshot1 from './assets/gallery/PlatformAdminDash.png';
-import screenshot2 from './assets/gallery/NetworkAdminDash.png';
-import screenshot3 from './assets/gallery/NetworkAdminAlertLog.png';
-import screenshot4 from './assets/gallery/NetworkAdminManageRule.png';
-import screenshot5 from './assets/gallery/NetworkAdminAlertNotif.png';
-import screenshot6 from './assets/gallery/SecurityAnaDash.png';
-import screenshot7 from './assets/gallery/SecurityAnaManageAlert.png';
-import screenshot8 from './assets/gallery/SecurityAnaViewLog.png';
+import screenshot2 from './assets/gallery/PlatformAdminAlert.png';
+import screenshot3 from './assets/gallery/NetworkAdminDash.png';
+import screenshot4 from './assets/gallery/NetworkAdminAlertLog.png';
+import screenshot5 from './assets/gallery/NetworkAdminManageRule.png';
+import screenshot6 from './assets/gallery/NetworkAdminAlertNotif.png';
+import screenshot7 from './assets/gallery/SecurityAnaDash.png';
+import screenshot8 from './assets/gallery/SecurityAnaManageAlert.png';
+import screenshot9 from './assets/gallery/SecurityAnaViewLog.png';
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,6 +25,7 @@ const App = () => {
     screenshot6,
     screenshot7,
     screenshot8,
+    screenshot9,
   ];
   
   useEffect(() => {
@@ -325,18 +327,19 @@ const App = () => {
           </p>
           
           {/* Video Recording */}
-          {/*
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <div className="w-full sm:w-[640px] aspect-video rounded-xl shadow-xl overflow-hidden">
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=TSuuX1c-Q4vGpuVf"
-                title="Project Syntra Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
-          </div> */}
+         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="w-full sm:w-[640px] aspect-video rounded-xl shadow-xl overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/I9sDZbGEp0o"
+              title="Project Syntra Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-6 rounded-xl bg-slate-700/20 backdrop-blur-lg">
