@@ -1,10 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, Activity, Eye, BarChart3, Network, Zap, Lock, AlertTriangle, CheckCircle, ArrowRight, Monitor, Database, Brain, Code, Github, ExternalLink } from 'lucide-react';
 import './App.css';
+import screenshot1 from './assets/gallery/PlatformAdminDash.png';
+import screenshot2 from './assets/gallery/NetworkAdminDash.png';
+import screenshot3 from './assets/gallery/NetworkAdminAlertLog.png';
+import screenshot4 from './assets/gallery/NetworkAdminManageRule.png';
+import screenshot5 from './assets/gallery/NetworkAdminAlertNotif.png';
+import screenshot6 from './assets/gallery/SecurityAnaDash.png';
+import screenshot7 from './assets/gallery/SecurityAnaManageAlert.png';
+import screenshot8 from './assets/gallery/SecurityAnaViewLog.png';
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const galleryImages = [
+    screenshot1,
+    screenshot2,
+    screenshot3,
+    screenshot4,
+    screenshot5,
+    screenshot6,
+    screenshot7,
+    screenshot8,
+  ];
   
   useEffect(() => {
     setIsVisible(true);
@@ -111,25 +131,63 @@ const App = () => {
             into a unified, intelligent dashboard for comprehensive cybersecurity management.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-xl">
-              <span>Explore Dashboard</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
+          <div className="mt-10 max-w-4xl mx-auto">
+            <div className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-900/60">
+              <div
+                className="flex transition-transform duration-500"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {galleryImages.map((src, index) => (
+                  <img
+                    key={index}
+                    src={src}
+                    alt={`Project Syntra screenshot ${index + 1}`}
+                    className="w-full flex-shrink-0 object-cover"
+                  />
+                ))}
+              </div>
 
-          {/* Gallery Section
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/gallery"    // replace with your actual route or external link
-              target="_blank"    // remove this if it's an internal route you want in the same tab
-              rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-xl"
-            >
-              <span>Explore Dashboard</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div> */}
+              {/* Prev button */}
+              <button
+                type="button"
+                onClick={() =>
+                  setCurrentSlide(
+                    (currentSlide - 1 + galleryImages.length) % galleryImages.length
+                  )
+                }
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-slate-800/90 border border-slate-600/80 rounded-full p-2"
+              >
+                <span className="sr-only">Previous slide</span>
+                ‹
+              </button>
+
+              {/* Next button */}
+              <button
+                type="button"
+                onClick={() =>
+                  setCurrentSlide((currentSlide + 1) % galleryImages.length)
+                }
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-slate-800/90 border border-slate-600/80 rounded-full p-2"
+              >
+                <span className="sr-only">Next slide</span>
+                ›
+              </button>
+            </div>
+
+            {/* Dots */}
+            <div className="flex justify-center mt-4 space-x-2">
+              {galleryImages.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full ${
+                    currentSlide === index ? 'bg-cyan-400' : 'bg-slate-600'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Floating Cards */}
@@ -272,7 +330,7 @@ const App = () => {
             <div className="w-full sm:w-[640px] aspect-video rounded-xl shadow-xl overflow-hidden">
               <iframe
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=TSuuX1c-Q4vGpuVf"
-                title="Project Sentinel Demo"
+                title="Project Syntra Demo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
